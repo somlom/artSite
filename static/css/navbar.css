@@ -1,0 +1,30 @@
+#navbar{
+    background-color: rgb(8, 54, 74);;
+    color: aliceblue;
+    padding: 5px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#navButtons{
+    display: flex;
+    flex-direction: row;
+}
+
+ @media screen and (max-width: 350px){
+    #navbar{
+        /* display: flex; */
+        flex-direction: column;
+        align-content: center;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    #navButtons{
+        /* display: flex; */
+        flex-direction: column;
+    }
+}

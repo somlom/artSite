@@ -1,0 +1,32 @@
+.navButton{
+    padding: 5px;
+    margin: 1px;
+    /* border: 2px solid black; */
+    border-radius: 5px;
+    width: min-content;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.primary{
+    border: 2px solid rgb(6, 174, 246);
+    background-color: deepskyblue;
+    color: white;
+}
+.primary:hover{
+    background-color: rgb(6, 174, 246);
+}
+
+.dark{
+    border: 2px solid white;
+    background-color: rgb(8, 54, 74);
+    color: white;
+}
+.dark:hover{
+    background-color: white;
+    color: rgb(8, 54, 74);
+}
+
+.dark:focus{
+    background-color: white;
+    color: rgb(8, 54, 74);
+}

@@ -1,0 +1,41 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* #anouncement{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    height: max-content;
+    
+} */
+/* #anouncement b{
+    position:  relative;
+    top: 100;
+} */
+
+#anouncement {
+    position: relative;
+    width: 50%;
+    height: max-content;
+}
+
+#anouncement img {
+    width: 100%;
+    height: auto;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 10%; /* Adjust based on your needs */
+    left: 15%; /* Adjust based on your needs */
+    transform: translate(-50%, -50%); /* Center the text */
+    text-align: left;
+}
+
+.overlay-text b {
+    font-size: xx-large;
+    color: white;
+}
