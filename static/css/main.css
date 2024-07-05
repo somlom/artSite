@@ -2,19 +2,22 @@ body{
     padding: 0;
     margin: 0;
     font-family: 'Courier New', Courier, monospace;
+    background-image: url("../pic/Mahalia-IRLalbum.jpg");
+} 
+
+#posts{
+    color: white;
 }
 
-/* #anouncement{
-    display: flex;
-    flex-direction: row;
-    width: 50%;
-    height: max-content;
-    
-} */
-/* #anouncement b{
-    position:  relative;
-    top: 100;
-} */
+.post {
+    border: 1px solid white;
+    margin: 5px;
+    padding: 5px;
+}
+
+.post img{
+    width: 40vw;
+}
 
 #anouncement {
     position: relative;

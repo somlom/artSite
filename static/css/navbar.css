@@ -1,5 +1,6 @@
 #navbar{
-    background-color: rgb(8, 54, 74);;
+    /* background-color: rgb(8, 54, 74); */
+    position: sticky;
     color: aliceblue;
     padding: 5px;
     border: 1px solid black;

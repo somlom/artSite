@@ -2,14 +2,14 @@
     padding: 5px;
     margin: 1px;
     /* border: 2px solid black; */
-    border-radius: 5px;
+    /* border-radius: 5px; */
     width: min-content;
     font-family: 'Courier New', Courier, monospace;
 }
 
 .primary{
-    border: 2px solid rgb(6, 174, 246);
-    background-color: deepskyblue;
+    /* border: 2px solid rgb(6, 174, 246); */
+    /* background-color: deepskyblue; */
     color: white;
 }
 .primary:hover{
@@ -17,13 +17,16 @@
 }
 
 .dark{
-    border: 2px solid white;
-    background-color: rgb(8, 54, 74);
+    /* border: 2px solid white; */
+    background-color: transparent;
+    background-repeat: no-repeat;
     color: white;
 }
 .dark:hover{
     background-color: white;
-    color: rgb(8, 54, 74);
+    border: 2px solid white;
+    /* color: rgb(8, 54, 74); */
+    color: black;
 }
 
 .dark:focus{
