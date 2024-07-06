@@ -22,8 +22,10 @@ There will appear:
 Make dbs:
 - [ ] change Posts to Anouncements
 - [ ] Concerts
-- [ ] Chat
+- [ ] Vorschlag
 - [ ] Albums
+
+- [ ] make TOTP auth
 
 ## Accessible pages
 ---

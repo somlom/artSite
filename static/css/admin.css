@@ -1,0 +1,39 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+#imagePreview {
+  max-width: 300px;
+  max-height: 300px;
+  display: none;
+  transition: all 0.3s ease-in-out;
+}
+
+#imagePreview:hover {
+  width: 80vw;
+  max-height: 100vh;
+  /* transition: all 0.3s ease-in-out; */
+}
+
+#removeImage {
+  display: none;
+  cursor: pointer;
+  color: red;
+}
