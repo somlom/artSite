@@ -1,8 +1,9 @@
 <?php
-$servername = "localhost";
-$username = "root";  // Change this to your MySQL username
-$password = "";      // Change this to your MySQL password
-$dbname = "blog";
+$env = parse_ini_file('.env');
+$servername = $env["SERVERNAME"];
+$username = $env["USERNAME"];
+$password = $env["PASSWORD"];
+$dbname = $env["DBNAME"];
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

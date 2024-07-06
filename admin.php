@@ -59,7 +59,6 @@ $result = $conn->query("SELECT * FROM posts ORDER BY created_at DESC");
                 <option value="Announcements" <?php if ($edit_post['category'] == 'Announcements') echo 'selected'; ?>>Announcements</option>
                 <option value="Concerts" <?php if ($edit_post['category'] == 'Concerts') echo 'selected'; ?>>Concerts</option>
                 <option value="Albums" <?php if ($edit_post['category'] == 'Albums') echo 'selected'; ?>>Albums</option>
-                <option value="Suggest me" <?php if ($edit_post['category'] == 'Suggest me') echo 'selected'; ?>>Suggest me</option>
             </select><br><br>
 
             <label for="image">Image:</label>
@@ -98,7 +97,6 @@ $result = $conn->query("SELECT * FROM posts ORDER BY created_at DESC");
                     <option value="Announcements">Announcements</option>
                     <option value="Concerts">Concerts</option>
                     <option value="Albums">Albums</option>
-                    <option value="Suggest me">Suggest me</option>
                 </select><br><br>
             </div>
             <div class="form-group">
