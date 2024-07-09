@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artist Name</title>
+    <title>MikeTheYoungin</title>
     <link rel="stylesheet" href="static/css/main.css">
     <link rel="stylesheet" href="static/css/navbar.css">
     <link rel="stylesheet" href="static/css/button.css">
@@ -14,7 +14,7 @@
 <body>
     <div id="navbar">
         <div id="navName">
-            <h3>Artist Name</h3>
+            <h3>MikeTheYoungin</h3>
         </div>
         <div id="navButtons">
             <?php
