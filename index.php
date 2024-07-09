@@ -63,9 +63,6 @@
                         echo '<p><small>Posted on ' . $post["created_at"] . '</small></p>';
                         echo '</div>';
                     }
-                    if ($category == "Suggestions") {
-                        echo '<button id="suggestButton" class="navButton dark" style="width: 100%;">Click to suggest me something</button>';
-                    }
                     echo '</div>';
                 }
             } else {
@@ -73,6 +70,7 @@
             }
 
             $conn->close();
+            echo '<button id="suggestButton" class="navButton dark" style="width: 100%; border: 1px solid black;">Click to suggest me something</button>';
             ?>
         </div>
     </div>

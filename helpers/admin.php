@@ -25,7 +25,7 @@ function updatePost($conn, $id, $title, $content, $category, $existing_image, $i
 
     // Handle image upload if a new image is provided
     if ($image_file && $image_file['error'] == 0) {
-        $image_path = 'uploads/' . basename($image_file['name']);
+        $image_path = 'static/pic/' . basename($image_file['name']);
         move_uploaded_file($image_file['tmp_name'], $image_path);
     } else {
         $image_path = $conn->real_escape_string($existing_image);
@@ -44,7 +44,7 @@ function addNewPost($conn, $title, $content, $category, $image_file)
 
     // Handle image upload
     if ($image_file && $image_file['error'] == 0) {
-        $image_path = 'uploads/' . basename($image_file['name']);
+        $image_path = 'static/pic/' . basename($image_file['name']);
         move_uploaded_file($image_file['tmp_name'], $image_path);
     } else {
         $image_path = '';

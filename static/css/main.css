@@ -3,6 +3,9 @@ body {
     margin: 0;
     font-family: 'Courier New', Courier, monospace;
     background-image: url("../pic/bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(35, 6, 107, 0.737);
 }
 
 #posts {
