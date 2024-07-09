@@ -1,31 +1,30 @@
-#navbar{
-    /* background-color: rgb(8, 54, 74); */
-    position: sticky;
-    color: aliceblue;
-    padding: 5px;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: row;
-    align-content: center;
+#navbar {
+  z-index: 1;
+  background-color: #d30404;
+  position: sticky;
+  top: 0;
+  color: aliceblue;
+  padding: 5px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  transition: top 0.3s; /* Add transition for smooth hide/show effect */
+}
+
+#navButtons {
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 767px) {
+  #navbar {
     align-items: center;
     justify-content: space-between;
-}
-
-#navButtons{
-    display: flex;
-    flex-direction: row;
-}
-
- @media screen and (max-width: 350px){
-    #navbar{
-        /* display: flex; */
-        flex-direction: column;
-        align-content: center;
-        align-items: flex-start;
-        justify-content: space-between;
-    }
-    #navButtons{
-        /* display: flex; */
-        flex-direction: column;
-    }
+    flex-wrap: wrap;
+  }
 }

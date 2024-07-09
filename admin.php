@@ -25,8 +25,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && !isset($_POST['update_post'])) {
     addNewPost($conn, $_POST['title'], $_POST['content'], $_POST['category'], $_FILES['image']);
 }
 
+// Handle suggestion actions
+if (isset($_GET['accept_suggestion'])) {
+    $suggestion_id = intval($_GET['accept_suggestion']);
+    acceptSuggestion($conn, $suggestion_id);
+} elseif (isset($_GET['delete_suggestion'])) {
+    $suggestion_id = intval($_GET['delete_suggestion']);
+    deleteSuggestion($conn, $suggestion_id);
+}
+
 // Fetch all posts
 $result = $conn->query("SELECT * FROM posts ORDER BY created_at DESC");
+
+// Fetch all suggestions
+$suggestionsResult = $conn->query("SELECT * FROM suggestions ORDER BY created_at DESC");
 ?>
 
 <!DOCTYPE html>
@@ -66,15 +78,11 @@ $result = $conn->query("SELECT * FROM posts ORDER BY created_at DESC");
             <input type="hidden" name="existing_image" value="<?php echo htmlspecialchars($edit_post['image_path']); ?>">
 
             <?php if (!empty($edit_post['image_path'])) : ?>
-
                 <img id="imagePreview" src="<?php echo htmlspecialchars($edit_post['image_path']); ?>" alt="Post Image" style="display: block;"><br>
                 <span id="removeImage" onclick="removeImage()">Remove Image &#x274C;</span><br><br>
-
             <?php else : ?>
-
                 <img id="imagePreview" src="" alt="Post Image"><br>
                 <span id="removeImage" onclick="removeImage()">Remove Image &#x274C;</span><br><br>
-
             <?php endif; ?>
 
             <input type="submit" name="update_post" value="Update Post">
@@ -135,6 +143,27 @@ $result = $conn->query("SELECT * FROM posts ORDER BY created_at DESC");
                 <td>
                     <a href="admin.php?edit=<?php echo $row['id']; ?>">Edit</a>
                     <a href="javascript:void(0);" onclick="confirmDeletion(<?php echo $row['id']; ?>, '<?php echo htmlspecialchars(addslashes($row['title'])); ?>')">Delete</a>
+                </td>
+            </tr>
+        <?php endwhile; ?>
+    </table>
+
+    <h2>Suggestions</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Suggestion</th>
+            <th>Created At</th>
+            <th>Actions</th>
+        </tr>
+        <?php while ($suggestion = $suggestionsResult->fetch_assoc()) : ?>
+            <tr>
+                <td><?php echo $suggestion['id']; ?></td>
+                <td><?php echo htmlspecialchars($suggestion['suggestion']); ?></td>
+                <td><?php echo $suggestion['created_at']; ?></td>
+                <td>
+                    <a href="admin.php?accept_suggestion=<?php echo $suggestion['id']; ?>">Accept</a>
+                    <a href="admin.php?delete_suggestion=<?php echo $suggestion['id']; ?>">Delete</a>
                 </td>
             </tr>
         <?php endwhile; ?>
